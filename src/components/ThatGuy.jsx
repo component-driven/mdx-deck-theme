@@ -16,7 +16,7 @@ function ThatGuy(props) {
 				{...props}
 			>
 				<Image
-					src={require('./that-guy.png')}
+					src={require('../../assets/that-guy.png')}
 					alt="That guy"
 				/>
 			</Box>
