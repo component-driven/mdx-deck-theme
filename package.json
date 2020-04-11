@@ -1,0 +1,50 @@
+{
+  "name": "@component-driven/mdx-deck-theme",
+  "version": "0.0.0-development",
+  "description": "Component-Driven theme for presentations",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/component-driven/mdx-deck-theme.git"
+  },
+  "keywords": ["MDX", "Gatsby", "Theme UI", "theme", "presentation"],
+  "author": "Andrey Okonetchnikov <andrey@okonet.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/component-driven/mdx-deck-theme/issues"
+  },
+  "homepage": "https://github.com/component-driven/mdx-deck-theme#readme",
+  "scripts": {
+    "postinstall": "patch-package",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "posttest": "npm run format",
+    "slides:start": "mdx-deck ./examples/example.mdx",
+    "slides:build": "mdx-deck build ./examples/example.mdx",
+    "format": "prettier --loglevel warn --write \"**/*.{js,jsx,md,mdx}\""
+  },
+  "dependencies": {
+    "mdx-deck": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react-live": "2.2.2",
+    "react-syntax-highlighter": "^12.2.1",
+    "react-tweet-embed": "1.2.2",
+    "theme-ui": "0.3.1"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.2",
+    "patch-package": "6.2.2",
+    "prettier": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

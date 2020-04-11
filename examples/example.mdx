@@ -1,0 +1,126 @@
+import myTheme from "../src";
+
+export const theme = { ...myTheme };
+
+<Footer>
+
+[Component-Driven](https://component-driven.io)
+
+</Footer>
+
+<Cover
+	title="Deck Name"
+	author="Andrey Okonetchnikov"
+/>
+
+---
+
+<Primary>
+
+# Primary slide
+
+</Primary>
+
+---
+
+<Secondary>
+
+# Secondary slide
+
+</Secondary>
+
+<Notes>Secondary slide</Notes>
+
+---
+
+> Takeaway slide
+
+<Notes>Takeaway slide</Notes>
+
+---
+
+# H1
+
+## H2
+
+### H3
+
+This is paragraph with `inline` code
+
+---
+
+<SplitTitle>
+
+# Ordered List
+
+1. List
+1. List
+1. List
+1. List
+
+</SplitTitle>
+
+---
+
+<Image src={require("./assets/colorsnapper.png")} size="contain" />
+
+---
+
+<SplitTitle>
+
+# Code Sample
+
+```jsx
+function Code({ children, language, inline = false }) {
+	if (typeof children !== "string") {
+		return (
+			<pre style={{ color: "firebrick" }}>
+				Code: `children` must be a string
+			</pre>
+		);
+	}
+	return (
+		<Prism {...codeTheme} useInlineStyles language={language}>
+			{children.replace(/\t/, "  ")}
+		</Prism>
+	);
+}
+```
+
+
+</SplitTitle>
+<ThatGuy />
+
+---
+
+<SplitTitle>
+
+# List with steps
+
+<Steps>
+
+- One
+- Two
+- Three
+- Four
+
+</Steps>
+</SplitTitle>
+
+---
+
+<LiveCode code={require('raw-loader!./assets/codeExample.txt')} />
+
+---
+
+<Demo src="https://component-driven.io" />
+
+---
+
+<Figure
+    src={require('./assets/component-driven.svg')}
+    alt="Component-driven Logo"
+    caption={
+        <a href="https://component-driven.io">https://component-driven.io</a>
+    }
+/>
