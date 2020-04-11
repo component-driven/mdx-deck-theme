@@ -23,7 +23,6 @@
     "format": "prettier --loglevel warn --write \"**/*.{js,jsx,md,mdx}\""
   },
   "dependencies": {
-    "mdx-deck": "^4.1.1",
     "prop-types": "^15.7.2",
     "react-live": "2.2.2",
     "react-syntax-highlighter": "^12.2.1",
@@ -31,10 +30,14 @@
     "theme-ui": "0.3.1"
   },
   "devDependencies": {
+    "mdx-deck": "^4.1.1",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
     "patch-package": "6.2.2",
     "prettier": "^2.0.4"
+  },
+  "peerDependencies": {
+    "mdx-deck": "^4.1.1"
   },
   "husky": {
     "hooks": {
