@@ -24,7 +24,6 @@
   "scripts": {
     "build": "babel --delete-dir-on-start --ignore '**/*.spec.js' --env-name cjs -d dist/ src/",
     "prepare": "npm run build",
-    "postinstall": "patch-package",
     "test": "echo \"Error: no test specified\" && exit 1",
     "posttest": "npm run format",
     "slides:start": "mdx-deck ./examples/example.mdx",
@@ -46,7 +45,6 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
     "mdx-deck": "^4.1.1",
-    "patch-package": "6.2.2",
     "prettier": "^2.0.4"
   },
   "peerDependencies": {
