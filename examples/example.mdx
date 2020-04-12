@@ -109,6 +109,10 @@ function Code({ children, language, inline = false }) {
 
 ---
 
+<Code language="jsx">{require('raw-loader!./assets/codeExample.txt')}</Code>
+
+---
+
 <LiveCode code={require('raw-loader!./assets/codeExample.txt')} />
 
 ---
