@@ -4,6 +4,7 @@ export default {
     "https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Work+Sans:400,700&amp;subset=latin-ext",
   fonts: {
     body: "Work Sans, sans-serif",
+    heading: "Work Sans, sans-serif",
     monospace: 'MonoLisa, "Fira Code", monospace',
   },
   fontSizes: {
@@ -13,7 +14,6 @@ export default {
     xl: "4em",
   },
   colors: {
-    heading: "inherit",
     text: "rgb(27, 37, 79)",
     background: "#fff",
     link: "rgb(27, 37, 79)",
@@ -28,12 +28,18 @@ export default {
     heading: {
       m: 5,
       fontSize: "xl",
+      fontFamily: "heading",
       textAlign: "center",
+    },
+    body: {
+      mx: 5,
     },
   },
   styles: {
     root: {
-      fontSize: "1vmax",
+      bg: "background",
+      fontSize: "2vmax", // Based on the global 16px font-size
+      fontFamily: "body",
       fontFeatureSettings: `'kern', 'pnum', common-ligatures contextual historical-ligatures`,
       WebkitFontKerning: "normal",
       fontKerning: "normal",
@@ -42,9 +48,6 @@ export default {
       "code, pre": {
         fontFamily: "monospace",
       },
-    },
-    Slide: {
-      // justifyContent: "start",
     },
     Split: {
       px: 5,
@@ -62,6 +65,9 @@ export default {
     h3: {
       variant: "text.heading",
       fontSize: "m",
+    },
+    p: {
+      variant: "text.body",
     },
     ul: {
       p: 0,
