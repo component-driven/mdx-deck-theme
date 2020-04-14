@@ -1,8 +1,9 @@
 /* @jsx jsx */
 import * as React from "react";
+import PropTypes from "prop-types";
 import { jsx, Box } from "theme-ui";
 
-export default ({ src }) => {
+function Demo({ src, prodSrc }) {
   return (
     <Box sx={{ position: "relative" }}>
       <Box
@@ -20,9 +21,16 @@ export default ({ src }) => {
         }}
       />
       <iframe
-        src={src}
+        src={prodSrc && process.env.NODE_ENV === "production" ? prodSrc : src}
         style={{ border: "none", width: "100vw", height: "100vh" }}
       />
     </Box>
   );
+}
+
+Demo.propTypes = {
+  src: PropTypes.string.isRequired,
+  prodSrc: PropTypes.string,
 };
+
+export default Demo;

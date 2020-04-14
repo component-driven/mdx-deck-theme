@@ -24,7 +24,7 @@
   "scripts": {
     "build": "babel --delete-dir-on-start --ignore '**/*.spec.js' --env-name cjs -d dist/ src/",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "true",
     "posttest": "npm run format",
     "slides:start": "mdx-deck ./examples/example.mdx",
     "slides:build": "mdx-deck build ./examples/example.mdx",
