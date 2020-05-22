@@ -37,6 +37,7 @@ export default {
   },
   styles: {
     root: {
+      m: 0,
       bg: "background",
       fontSize: "2vmax", // Based on the global 16px font-size
       fontFamily: "body",
