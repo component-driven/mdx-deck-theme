@@ -8,14 +8,11 @@ export const theme = { ...myTheme };
 
 </Footer>
 
-<Cover
-	title="Deck Name"
-	author="Andrey Okonetchnikov"
-/>
+<Cover title="Deck Name" author="Andrey Okonetchnikov" />
 
 ---
 
-<Primary>
+<Primary imgSrc="//source.unsplash.com/-K6JMRMj4x4/2560x1920" sx={{ backgroundBlendMode: "multiply" }}>
 
 # Primary slide
 
@@ -23,7 +20,7 @@ export const theme = { ...myTheme };
 
 ---
 
-<Secondary>
+<Secondary imgSrc={require("./assets/colorsnapper.png")}>
 
 # Secondary slide
 
@@ -72,21 +69,20 @@ This is paragraph with `inline` code
 
 ```jsx
 function Code({ children, language, inline = false }) {
-	if (typeof children !== "string") {
-		return (
-			<pre style={{ color: "firebrick" }}>
-				Code: `children` must be a string
-			</pre>
-		);
-	}
-	return (
-		<Prism {...codeTheme} useInlineStyles language={language}>
-			{children.replace(/\t/, "  ")}
-		</Prism>
-	);
+  if (typeof children !== "string") {
+    return (
+      <pre style={{ color: "firebrick" }}>
+        Code: `children` must be a string
+      </pre>
+    );
+  }
+  return (
+    <Prism {...codeTheme} useInlineStyles language={language}>
+      {children.replace(/\t/, "  ")}
+    </Prism>
+  );
 }
 ```
-
 
 </SplitTitle>
 <ThatGuy />
@@ -109,11 +105,11 @@ function Code({ children, language, inline = false }) {
 
 ---
 
-<Code language="jsx">{require('raw-loader!./assets/codeExample.txt')}</Code>
+<Code language="jsx">{require("raw-loader!./assets/codeExample.txt")}</Code>
 
 ---
 
-<LiveCode code={require('raw-loader!./assets/codeExample.txt')} />
+<LiveCode code={require("raw-loader!./assets/codeExample.txt")} />
 
 ---
 
@@ -122,9 +118,9 @@ function Code({ children, language, inline = false }) {
 ---
 
 <Figure
-    src={require('./assets/component-driven.svg')}
-    alt="Component-driven Logo"
-    caption={
-        <a href="https://component-driven.io">https://component-driven.io</a>
-    }
+  src={require("./assets/component-driven.svg")}
+  alt="Component-driven Logo"
+  caption={
+    <a href="https://component-driven.io">https://component-driven.io</a>
+  }
 />

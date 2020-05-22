@@ -1,6 +1,13 @@
 import React from "react";
-import { Color } from "mdx-deck";
+import {Invert} from "mdx-deck";
 
-export default (props) => (
-	<Color bg="secondary" color="background" {...props} />
-);
+export default ({children, imgSrc, sx,...props}) => <Invert sx={{
+	backgroundColor: "secondary",
+	backgroundSize: "cover",
+	backgroundImage: `url(${imgSrc})`,
+	backgroundPosition: "center",
+	backgroundBlendMode: "multiply",
+	...sx,
+}} {...props}>
+	{children}
+</Invert>;
