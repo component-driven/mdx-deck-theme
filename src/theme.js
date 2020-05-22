@@ -1,17 +1,20 @@
 export default {
   aspectRatio: 9 / 16,
-  googleFont:
-    "https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Work+Sans:400,700&amp;subset=latin-ext",
+  googleFont: "https://www.monolisa.dev/static/fonts.css",
   fonts: {
-    body: "Work Sans, sans-serif",
-    heading: "Work Sans, sans-serif",
-    monospace: 'MonoLisa, "Fira Code", monospace',
+    body: "MonoLisa, sans-serif",
+    heading: "MonoLisa, sans-serif",
+    monospace: "MonoLisa, monospace",
+  },
+  fontWeights: {
+    body: 300,
+    heading: 500,
   },
   fontSizes: {
-    s: "1em",
-    m: "1.5em",
-    l: "2.25em",
-    xl: "4em",
+    s: "0.8em",
+    m: "1em",
+    l: "2em",
+    xl: "3em",
   },
   colors: {
     text: "rgb(27, 37, 79)",
@@ -26,20 +29,33 @@ export default {
   },
   text: {
     heading: {
-      m: 5,
-      fontSize: "xl",
+      mb: 4,
       fontFamily: "heading",
+      fontWeight: "heading",
+      fontSize: "xl",
       textAlign: "center",
     },
     body: {
       mx: 5,
+      fontFamily: "body",
+      fontWeight: "body",
+      fontSize: "m",
+    },
+    quote: {
+      fontFamily: "body",
+      fontWeight: "body",
+      fontStyle: "italic",
+      fontSize: "l",
+      textAlign: "center",
     },
   },
   styles: {
     root: {
+      m: 0,
       bg: "background",
-      fontSize: "2vmax", // Based on the global 16px font-size
+      fontSize: "16px", // Based on the global 16px font-size
       fontFamily: "body",
+      fontWeight: "body",
       fontFeatureSettings: `'kern', 'pnum', common-ligatures contextual historical-ligatures`,
       WebkitFontKerning: "normal",
       fontKerning: "normal",
@@ -90,8 +106,7 @@ export default {
       fontSize: "s",
     },
     blockquote: {
-      textAlign: "center",
-      fontSize: "l",
+      variant: "text.quote",
     },
   },
 };
