@@ -19,7 +19,6 @@ import Code from "./components/Code";
 import Demo from "./components/Demo";
 import Figure from "./components/Figure";
 import Video from "./components/Video";
-import Cover from "./layouts/Cover";
 import TweetEmbed from "react-tweet-embed";
 import LiveCode from "./components/LiveCode";
 
@@ -42,7 +41,6 @@ export default {
     FullScreenCode,
     Center,
     SplitTitle,
-    Cover,
     Primary,
     Secondary,
     AnimatedGradient,

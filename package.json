@@ -26,8 +26,8 @@
     "prepare": "npm run build",
     "test": "true",
     "posttest": "npm run format",
-    "slides:start": "mdx-deck ./examples/example.mdx",
-    "slides:build": "mdx-deck build ./examples/example.mdx",
+    "slides:start": "gatsby develop",
+    "slides:build": "gatsby clean && gatsby build --prefix-paths",
     "format": "prettier --loglevel warn --write \"**/*.{js,jsx,md,mdx}\""
   },
   "dependencies": {
@@ -42,6 +42,9 @@
     "@babel/core": "7.9.0",
     "@babel/preset-env": "7.9.5",
     "@babel/preset-react": "7.9.4",
+    "gatsby": "^2.20.18",
+    "gatsby-plugin-compile-es6-packages": "2.1.0",
+    "gatsby-theme-mdx-deck": "4.1.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
     "mdx-deck": "^4.1.1",

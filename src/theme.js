@@ -7,14 +7,14 @@ export default {
     monospace: "MonoLisa, monospace",
   },
   fontWeights: {
-    body: 300,
-    heading: 500,
+    body: 400,
+    heading: 600,
   },
   fontSizes: {
     s: "0.8em",
     m: "1em",
-    l: "2em",
-    xl: "3em",
+    l: "1.5em",
+    xl: "2em",
   },
   colors: {
     text: "rgb(27, 37, 79)",
@@ -53,7 +53,7 @@ export default {
     root: {
       m: 0,
       bg: "background",
-      fontSize: "16px", // Based on the global 16px font-size
+      fontSize: "2.5vmax", // Make the typograpy respond to window size
       fontFamily: "body",
       fontWeight: "body",
       fontFeatureSettings: `'kern', 'pnum', common-ligatures contextual historical-ligatures`,
@@ -95,7 +95,6 @@ export default {
     inlineCode: {
       color: "secondary",
       fontFamily: "monospace",
-      fontSize: "85%",
     },
     code: {
       color: "secondary",
