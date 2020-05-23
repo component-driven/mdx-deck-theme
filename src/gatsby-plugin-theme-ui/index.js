@@ -1,7 +1,5 @@
-import theme from "@component-driven/mdx-deck-theme";
+import theme from "../";
 
 export default {
-  styles: {
-    ...theme.styles.root,
-  },
+  ...theme,
 };

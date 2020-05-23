@@ -2,13 +2,13 @@ import myTheme from "../src";
 
 export const theme = { ...myTheme };
 
-<Footer>
+<Primary>
 
-[Component-Driven](https://component-driven.io)
+# Deck Name
 
-</Footer>
+by Andrey Okonetchnikov
 
-<Cover title="Deck Name" author="Andrey Okonetchnikov" />
+</Primary>
 
 ---
 
@@ -20,7 +20,7 @@ export const theme = { ...myTheme };
 
 ---
 
-<Secondary imgSrc={require("./assets/colorsnapper.png")}>
+<Secondary imgSrc={"./assets/colorsnapper.png"}>
 
 ## Secondary slide
 
@@ -59,7 +59,7 @@ This is paragraph with `inline` code
 
 ---
 
-<Image src={require("./assets/colorsnapper.png")} size="contain" />
+<Image src={"/assets/colorsnapper.png"} size="contain" />
 
 ---
 
@@ -105,11 +105,11 @@ function Code({ children, language, inline = false }) {
 
 ---
 
-<Code language="jsx">{require("raw-loader!./assets/codeExample.txt")}</Code>
+<Code language="jsx">{"<h1>Example</h1>"}</Code>
 
 ---
 
-<LiveCode code={require("raw-loader!./assets/codeExample.txt")} />
+<LiveCode code={"<h1>Example</h1>"} />
 
 ---
 
@@ -118,7 +118,7 @@ function Code({ children, language, inline = false }) {
 ---
 
 <Figure
-  src={require("./assets/component-driven.svg")}
+  src={"/assets/component-driven.svg"}
   alt="Component-driven Logo"
   caption={
     <a href="https://component-driven.io">https://component-driven.io</a>
