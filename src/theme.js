@@ -53,7 +53,7 @@ export default {
     root: {
       m: 0,
       bg: "background",
-      fontSize: "2.5vmax", // Make the typograpy respond to window size
+      fontSize: "2vmax", // Make the typography respond to window size
       fontFamily: "body",
       fontWeight: "body",
       fontFeatureSettings: `'kern', 'pnum', common-ligatures contextual historical-ligatures`,
