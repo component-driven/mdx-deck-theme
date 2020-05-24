@@ -1,6 +1,7 @@
 export default {
   aspectRatio: 9 / 16,
   googleFont: "https://www.monolisa.dev/static/fonts.css",
+  space: [0, "0.25rem", "0.5rem", "1rem", "2rem", "4rem"],
   fonts: {
     body: "MonoLisa, sans-serif",
     heading: "MonoLisa, sans-serif",
