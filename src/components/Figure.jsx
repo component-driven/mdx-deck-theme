@@ -1,41 +1,38 @@
 /** @jsx jsx */
 import * as React from "react";
 import PropTypes from "prop-types";
-import { jsx, Text, Flex, Grid, Image } from "theme-ui";
+import {jsx, Flex, Image, Text} from "theme-ui";
 
-function Figure({ src, alt, caption, ...props }) {
-	return (
-		<Flex
-			as="figure"
-			gap={4}
-			{...props}
-			sx={{
-				p: 5,
-				flexDirection: "column",
-				justifyItems: "center",
-				maxHeight: "100%",
-			}}
-		>
-			<Image
-				src={src}
-				alt={alt}
-				sx={{
-					display: "block",
-					flexShrink: 1,
-					maxHeight: "100%",
-				}}
-			/>
-			{caption && (
-				<Text
-					as="figcaption"
-					variant="styles.figcaption"
-					sx={{ flexShrink: 0, my: 4 }}
-				>
-					{caption}
-				</Text>
-			)}
-		</Flex>
-	);
+function Figure({ src, alt, caption, ratio = 4 / 3, ...props }) {
+  return (
+    <Flex
+      as="figure"
+      gap={4}
+      {...props}
+      sx={{
+        flexDirection: "column",
+        justifyItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <Flex
+        sx={{
+          flexGrow: 1,
+          maxHeight: "90%",
+          justifyContent: "center",
+        }}
+      >
+        <Image src={src} alt={alt} sx={{ objectFit: "scale-down" }} />
+      </Flex>
+      {caption && (
+        <Text as="figcaption" variant="styles.figcaption" sx={{ mt: 4 }}>
+          {caption}
+        </Text>
+      )}
+    </Flex>
+  );
 }
 
 Figure.propTypes = {

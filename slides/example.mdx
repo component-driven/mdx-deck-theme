@@ -59,6 +59,52 @@ This is paragraph with `inline` code
 
 ---
 
+<Grid columns={3}>
+<Box>
+
+### OSS
+
+<small>ex. Material UI, Ant Design, Bootstrap</small>
+
+</Box>
+<Box>
+
+### Mix
+
+<small>
+  Re-export or wrap components from OSS (Reakit, Theme-UI, Chakra, etc.)
+</small>
+
+</Box>
+<Box>
+
+### Custom
+
+<small>Build everything from scratch (using styled-system, etc.)</small>
+
+</Box>
+</Grid>
+
+---
+
+<Figure
+	src={'/assets/chakra.png'}
+	alt="Chakra UI Homepage"
+	caption={<a href="https://chakra-ui.com">https://chakra-ui.com</a>}
+/>
+
+---
+
+<Figure
+  src={"/assets/component-driven.svg"}
+  alt="Component-driven Logo"
+  caption={
+    <a href="https://component-driven.io">https://component-driven.io</a>
+  }
+/>
+
+---
+
 <Image src={"/assets/colorsnapper.png"} size="contain" />
 
 ---
@@ -115,12 +161,3 @@ function Code({ children, language, inline = false }) {
 
 <Demo src="https://component-driven.io" />
 
----
-
-<Figure
-  src={"/assets/component-driven.svg"}
-  alt="Component-driven Logo"
-  caption={
-    <a href="https://component-driven.io">https://component-driven.io</a>
-  }
-/>
