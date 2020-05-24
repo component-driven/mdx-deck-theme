@@ -65,6 +65,9 @@ export default {
         fontFamily: "monospace",
       },
     },
+    Slide: {
+      p: 5,
+    },
     Split: {
       px: 5,
       width: "100%",

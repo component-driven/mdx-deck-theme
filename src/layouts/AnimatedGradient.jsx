@@ -17,6 +17,9 @@ const animation = keyframes`
 
 export default styled(Invert)(
 	css((theme) => ({
+        position: "absolute",
+        width: "100vw",
+        height: "100vh",
 		background: `linear-gradient(270deg, ${theme.colors.primary}, ${theme.colors.accent})`,
 		backgroundSize: "400% 400%",
 		animation: `${animation} 10s infinite`,
