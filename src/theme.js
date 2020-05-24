@@ -1,6 +1,7 @@
 export default {
   aspectRatio: 9 / 16,
   googleFont: "https://www.monolisa.dev/static/fonts.css",
+  space: [0, "0.25rem", "0.5rem", "1rem", "2rem", "4rem"],
   fonts: {
     body: "MonoLisa, sans-serif",
     heading: "MonoLisa, sans-serif",
@@ -53,7 +54,7 @@ export default {
     root: {
       m: 0,
       bg: "background",
-      fontSize: "2.5vmax", // Make the typograpy respond to window size
+      fontSize: "2vmax", // Make the typography respond to window size
       fontFamily: "body",
       fontWeight: "body",
       fontFeatureSettings: `'kern', 'pnum', common-ligatures contextual historical-ligatures`,
@@ -64,6 +65,9 @@ export default {
       "code, pre": {
         fontFamily: "monospace",
       },
+    },
+    Slide: {
+      p: 5,
     },
     Split: {
       px: 5,
