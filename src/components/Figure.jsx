@@ -3,7 +3,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import {jsx, Flex, Image, Text} from "theme-ui";
 
-function Figure({ src, alt, caption, ratio = 4 / 3, ...props }) {
+function Figure({ src, alt, caption, ...props }) {
   return (
     <Flex
       as="figure"
