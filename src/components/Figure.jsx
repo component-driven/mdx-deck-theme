@@ -24,7 +24,7 @@ function Figure({ src, alt, caption, ...props }) {
           justifyContent: "center",
         }}
       >
-        <Image src={src} alt={alt} sx={{ objectFit: "scale-down" }} />
+        <Image src={src} alt={alt} sx={{ objectFit: "contain" }} />
       </Flex>
       {caption && (
         <Text as="figcaption" variant="styles.figcaption" sx={{ mt: 4 }}>
