@@ -42,7 +42,7 @@
     "@babel/core": "7.9.0",
     "@babel/preset-env": "7.9.5",
     "@babel/preset-react": "7.9.4",
-    "gatsby": "^2.20.18",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-compile-es6-packages": "2.1.0",
     "gatsby-theme-mdx-deck": "4.1.0",
     "husky": "^4.2.3",
